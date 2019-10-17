@@ -1,0 +1,33 @@
+@tailwind base;
+
+@tailwind components;
+
+@import "components/buttons.css";
+@import "components/switch.css";
+@import "components/dropdown.css";
+
+input,
+optgroup,
+select,
+textarea {
+  color: theme("colors.grey-darkest");
+}
+img {
+  max-width: unset;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-heading;
+}
+
+@tailwind utilities;

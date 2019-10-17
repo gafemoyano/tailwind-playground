@@ -1,31 +1,31 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/styles.css',
+  entry: "./src/tailwind.css",
   mode: process.env.NODE_ENV,
   module: {
     rules: [
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+          fallback: "style-loader",
           use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            'postcss-loader',
-          ],
-        }),
-      },
-    ],
+            { loader: "css-loader", options: { importLoaders: 1 } },
+            "postcss-loader"
+          ]
+        })
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css', {
-      disable: process.env.NODE_ENV === 'development',
+    new ExtractTextPlugin("styles.css", {
+      disable: process.env.NODE_ENV === "development"
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-    }),
-  ],
-}
+      filename: "index.html",
+      template: "src/index.html"
+    })
+  ]
+};

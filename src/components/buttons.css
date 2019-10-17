@@ -1,0 +1,176 @@
+.btn {
+  @apply inline-block font-semibold text-center whitespace-no-wrap align-middle select-none cursor-pointer rounded-full border-solid border-transparent border leading-tight text-sm;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+
+btn:focus,
+btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(101, 116, 205, 0.25);
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 42, 96, 0.4);
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+/*Primary button*/
+.btn-primary {
+  color: #fff;
+  background-color: #003780;
+  border-color: #003780;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #00275a;
+  border-color: #00214d;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 55, 128, 0.5);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #003780;
+  border-color: #003780;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #00214d;
+  border-color: #001c40;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 55, 128, 0.5);
+}
+
+/*Seoncdary button*/
+.btn-orange {
+  @apply bg-orange-400 text-white font-semibold px-2 py-1 rounded-full;
+}
+.btn-orange:hover {
+  @apply bg-orange-300;
+}
+
+.btn-orange.disabled,
+.btn-orange:disabled {
+  @apply bg-grey-light cursor-not-allowed;
+}
+
+/*Blue gradient button*/
+.btn-blue-gradient {
+  @apply text-white;
+  background-image: linear-gradient(
+    -45deg,
+    theme("colors.blue-darkest"),
+    theme("colors.blue-dark")
+  );
+}
+
+.btn-blue-gradient:hover {
+  @apply text-white;
+  box-shadow: theme("colors.blue-lightest") 0px 8px 8px;
+  transform: translateX(-1px);
+}
+
+.btn-blue-gradient:focus,
+.btn-blue-gradient.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 42, 96, 0.4);
+}
+
+/*Celeste gradient button*/
+.btn-celeste-gradient {
+  @apply text-white;
+  background-image: linear-gradient(
+    -90deg,
+    theme("colors.celeste-500"),
+    theme("colors.celeste-700")
+  );
+}
+
+.btn-celeste-gradient:hover {
+  @apply text-white;
+  box-shadow: theme("colors.grey-darkest") "0 2px 4px 0 rgba(0,0,0,0.10)";
+}
+
+.btn-blue-gradient:focus,
+.btn-blue-gradient.focus {
+  box-shadow: theme("colors.grey-darkest") "0 2px 4px 0 rgba(0,0,0,0.10)";
+}
+
+/*Orange gradient button*/
+.btn-orange-gradient {
+  @apply text-white;
+  background-image: linear-gradient(
+    -45deg,
+    theme("colors.orange-500"),
+    theme("colors.orange-300")
+  );
+}
+
+.btn-orange-gradient:hover {
+  @apply text-white;
+}
+
+.btn-orange-gradient:focus,
+.btn-orange-gradient.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 42, 96, 0.4);
+}
+
+/*Celeste dark button*/
+.btn-celeste-dark {
+  @apply text-blue-dark;
+  @apply bg-celeste-700;
+}
+
+/*Celeste button*/
+
+.btn-celeste {
+  @apply text-blue-dark;
+  @apply bg-celeste-400;
+}
+
+.btn-celeste:hover {
+  @apply text-blue-dark;
+  box-shadow: theme("colors.blue-lightest") 0px 4px 4px;
+  transform: translateY(-1px);
+}
+
+.btn-celeste:focus,
+.btn-celeste.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 42, 96, 0.4);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 42, 96, 0.4);
+}

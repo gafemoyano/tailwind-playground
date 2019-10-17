@@ -1,0 +1,48 @@
+/* purgecss start ignore */
+
+/* Used to detect in JavaScript if apps have loaded styles or not. */
+:root {
+    --reach-menu-button: 1;
+}
+
+[data-reach-menu] {
+    @apply font-sans absolute block;
+}
+
+[data-reach-menu-list] {
+    @apply bg-white py-2 border border-grey-light bg-white rounded whitespace-no-wrap outline-none block;
+}
+
+[data-reach-menu-item] {
+    @apply block;
+}
+
+/*
+ The dom structure of a MenuLink is reach-menu-item > a,
+ so to target all items we can use `data-reach-menu-item`
+*/
+[data-reach-menu-item] {
+    /*
+      These are styled in one rule instead of something like a[data-reach-menu-item]
+      and li[data-reach-menu-item] so that apps don't have to fight specificity and
+      can style both li and a menu items with one rule,
+      ie: `[data-selected] { background: red; }`.
+      Otherwise they'd have to define two styles, one for a and one for li.
+    */
+
+    /* reach-menu-item */
+
+    /* a */
+    color: inherit;
+    font: inherit;
+    text-decoration: initial;
+
+    /* both */
+    @apply p-2 cursor-pointer block
+}
+
+/* pseudo pseudo selector */
+[data-reach-menu-item][data-selected] {
+    @apply bg-blue-200 text-grey-darkest outline-none
+}
+/* purgecss end ignore */
